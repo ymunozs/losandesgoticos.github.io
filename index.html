@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio Personal - [Tu Nombre]</title>
+    <style>
+        /* Aquí irá tu código CSS para dar estilo a la página */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background-color: #333;
+            color: #fff;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        h2 {
+            color: #555;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .audio-player {
+            margin-bottom: 15px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Mi Rincón Creativo</h1>
+        <p>Textos y Melodías de [Tu Nombre]</p>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#textos">Mis Textos</a></li>
+                <li><a href="#musica">Mi Música</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="inicio">
+            <h2>¡Hola y Bienvenidx!</h2>
+            <p>Este es un espacio donde comparto mis creaciones, tanto escritas como musicales. Espero que disfrutes explorando mi mundo.</p>
+            <p>Aquí podrás encontrar una variedad de escritos, desde [tipo de texto 1, ej: poesía] hasta [tipo de texto 2, ej: relatos cortos], y también algunas de mis composiciones y grabaciones musicales.</p>
+        </section>
+
+        <hr>
+
+        <section id="textos">
+            <h2>Mis Textos</h2>
+            <article>
+                <h3>Título del Primer Texto</h3>
+                <p>Fecha: 28 de junio de 2025</p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                    [Aquí puedes añadir más párrafos o el contenido completo de tu texto. Para textos largos, podrías considerar crear archivos HTML separados y enlazar a ellos desde aquí.]
+                </p>
+            </article>
+
+            <article>
+                <h3>Título del Segundo Texto</h3>
+                <p>Fecha: [Fecha del Segundo Texto]</p>
+                <p>
+                    Otro texto interesante que he escrito. Puedes cambiar este texto por el tuyo propio. Recuerda usar la etiqueta `<p>` para cada párrafo.
+                </p>
+            </article>
+
+            </section>
+
+        <hr>
+
+        <section id="musica">
+            <h2>Mi Música</h2>
+            <div class="audio-player">
+                <h3>Nombre de la Canción 1</h3>
+                <p>Artista: [Tu Nombre] | Género: [Género Musical]</p>
+                <audio controls>
+                    <source src="ruta/a/tu_cancion1.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+                <p>Breve descripción de la canción o el contexto en el que fue creada.</p>
+            </div>
+
+            <div class="audio-player">
+                <h3>Nombre de la Canción 2</h3>
+                <p>Artista: [Tu Nombre] | Género: [Género Musical]</p>
+                <audio controls>
+                    <source src="ruta/a/tu_cancion2.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+                <p>Otra descripción para tu segunda pieza musical.</p>
+            </div>
+
+            </section>
+
+        <hr>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Si quieres saber más sobre mi trabajo o contactarme, puedes hacerlo a través de:</p>
+            <ul>
+                <li>Email: <a href="mailto:tuemail@ejemplo.com">tuemail@ejemplo.com</a></li>
+                <li>[Otras redes sociales o enlaces relevantes, ej: Instagram, Bandcamp]</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 [Tu Nombre]. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
