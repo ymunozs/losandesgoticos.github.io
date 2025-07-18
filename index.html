@@ -33,7 +33,7 @@
 
         /* Encabezado */
         header {
-            text-align: center;
+            text-align: center; /* El título y subtítulo se mantienen centrados */
             padding-bottom: 20px;
             border-bottom: 1px solid #333;
             margin-bottom: 20px;
@@ -55,60 +55,65 @@
             margin-top: 10px;
         }
 
-        /* Navegación (Menús) */
+        /* Navegación (Menús Principales) */
         nav {
-            text-align: center;
+            text-align: left; /* Alineado a la izquierda */
             margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #333;
+            padding-bottom: 0; /* Eliminado el padding inferior */
+            border-bottom: none; /* Eliminada la barra divisoria */
         }
 
         nav ul {
             list-style: none;
             padding: 0;
             margin: 0;
+            display: flex; /* Usar flexbox para los ítems */
+            flex-wrap: wrap; /* Permitir que los ítems salten de línea en pantallas pequeñas */
+            justify-content: flex-start; /* Alineación a la izquierda */
+            gap: 15px; /* Espacio entre los ítems */
         }
 
         nav ul li {
-            display: inline-block;
-            margin: 0 15px;
+            display: inline-block; /* Aunque flexbox ya lo hace, mantiene compatibilidad */
             font-size: 1.1em;
             font-weight: 400;
+            margin: 0; /* Resetea el margen si nav ul tuvo uno */
         }
 
         nav ul li a {
             color: #fff;
+            padding: 5px 0; /* Pequeño padding para el área clicable */
         }
 
         nav ul li a:hover {
             color: #ddd;
         }
 
-        /* Sidebar (Bio, Ask y Avatar) */
+        /* Sidebar (Bio, Ask y Avatar) - Mantiene su alineación a la izquierda */
         .sidebar {
             margin-top: 40px;
             padding-top: 30px;
             border-top: 1px solid #333;
             display: flex;
-            flex-direction: column; /* Apilar elementos verticalmente por defecto */
-            align-items: flex-start; /* Alinear todos los elementos a la izquierda */
-            gap: 20px; /* Espacio entre los bloques principales del sidebar */
-            padding-left: 0; /* Asegura que no haya padding extra que impida alineación */
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+            padding-left: 0;
             padding-right: 0;
         }
 
-        .sidebar-top-links { /* Contenedor para "Acerca de" y "Contacto" */
+        .sidebar-top-links {
             display: flex;
-            flex-direction: column; /* Vertical por defecto en móvil */
+            flex-direction: column;
             gap: 20px;
-            width: 100%; /* Para que los enlaces puedan expandirse si es necesario */
+            width: 100%;
         }
 
         .bio, .ask {
             margin-bottom: 0;
             flex-shrink: 0;
             min-width: 120px;
-            text-align: left; /* Asegura que el texto dentro de bio/ask esté alineado a la izquierda */
+            text-align: left;
         }
 
         .bio h3, .ask h3 {
@@ -116,9 +121,8 @@
             white-space: nowrap;
         }
 
-        .sidebar-avatar { /* Contenedor para la imagen del avatar */
-            margin-top: 10px; /* Espacio debajo de los enlaces */
-            /* No necesitamos text-align: left; aquí si el padre ya alinea a la izquierda */
+        .sidebar-avatar {
+            margin-top: 10px;
         }
 
         .sidebar-avatar img {
@@ -129,10 +133,10 @@
             border: 2px solid #555;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             background-color: #000;
-            display: block; /* Para controlar el margen */
+            display: block;
         }
 
-        /* Contenido Principal (donde irán tus textos, música, etc.) */
+        /* Contenido Principal */
         main {
             padding-top: 30px;
             border-top: 1px dashed #333;
@@ -165,8 +169,7 @@
         /* Media Query para pantallas más grandes: sidebar horizontal para enlaces */
         @media (min-width: 480px) {
             .sidebar-top-links {
-                flex-direction: row; /* Habilitar disposición horizontal */
-                /* justify-content: flex-start;  Ya se alinean a la izquierda por el padre */
+                flex-direction: row;
             }
         }
     </style>
@@ -185,7 +188,7 @@
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="textos.html">Mis textos</a></li>
                 <li><a href="musica.html">Mi música</a></li>
-            </ul>
+                <li><a href="fotos.html">Mis fotos</a></li> </ul>
         </nav>
 
         <div class="sidebar">
@@ -204,7 +207,7 @@
 
         <main>
             <h2>Bienvenido a Los Andes Góticos</h2>
-            <p>En este lugar comparto mis trabajos, mi música, mis textos y mis fotos.</p>
+            <p>EEn este lugar comparto mis trabajos, textos, música y algunas fotos.</p>
             </main>
 
         <footer>
