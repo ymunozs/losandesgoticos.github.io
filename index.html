@@ -84,13 +84,44 @@
             color: #ddd;
         }
 
-        /* Avatar principal */
-        .main-avatar {
-            text-align: center;
-            margin: -20px auto 40px auto;
+        /* Sidebar (Bio, Ask y Avatar) */
+        .sidebar {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            display: flex;
+            flex-direction: column; /* Apilar elementos verticalmente por defecto */
+            align-items: flex-start; /* Alinear todos los elementos a la izquierda */
+            gap: 20px; /* Espacio entre los bloques principales del sidebar */
+            padding-left: 0; /* Asegura que no haya padding extra que impida alineación */
+            padding-right: 0;
         }
 
-        .main-avatar img {
+        .sidebar-top-links { /* Contenedor para "Acerca de" y "Contacto" */
+            display: flex;
+            flex-direction: column; /* Vertical por defecto en móvil */
+            gap: 20px;
+            width: 100%; /* Para que los enlaces puedan expandirse si es necesario */
+        }
+
+        .bio, .ask {
+            margin-bottom: 0;
+            flex-shrink: 0;
+            min-width: 120px;
+            text-align: left; /* Asegura que el texto dentro de bio/ask esté alineado a la izquierda */
+        }
+
+        .bio h3, .ask h3 {
+            margin-bottom: 0;
+            white-space: nowrap;
+        }
+
+        .sidebar-avatar { /* Contenedor para la imagen del avatar */
+            margin-top: 10px; /* Espacio debajo de los enlaces */
+            /* No necesitamos text-align: left; aquí si el padre ya alinea a la izquierda */
+        }
+
+        .sidebar-avatar img {
             width: 100px;
             height: 100px;
             border-radius: 0;
@@ -98,32 +129,7 @@
             border: 2px solid #555;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             background-color: #000;
-            display: block;
-            margin: 0 auto;
-        }
-
-        /* Sidebar (Bio y Ask) - Ahora horizontal para pantallas más grandes */
-        .sidebar {
-            margin-top: 40px;
-            padding-top: 30px;
-            border-top: 1px solid #333;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .bio, .ask {
-            margin-bottom: 0;
-            flex-shrink: 0;
-            min-width: 120px;
-        }
-
-        .bio h3, .ask h3 {
-            margin-bottom: 0;
-            white-space: nowrap;
+            display: block; /* Para controlar el margen */
         }
 
         /* Contenido Principal (donde irán tus textos, música, etc.) */
@@ -156,11 +162,11 @@
             margin-top: 60px;
         }
 
-        /* Media Query para pantallas más grandes: sidebar horizontal */
+        /* Media Query para pantallas más grandes: sidebar horizontal para enlaces */
         @media (min-width: 480px) {
-            .sidebar {
-                flex-direction: row;
-                justify-content: center;
+            .sidebar-top-links {
+                flex-direction: row; /* Habilitar disposición horizontal */
+                /* justify-content: flex-start;  Ya se alinean a la izquierda por el padre */
             }
         }
     </style>
@@ -182,22 +188,23 @@
             </ul>
         </nav>
 
-        <div class="main-avatar">
-            <img src="https://64.media.tumblr.com/dee90fcb298c458c07661f4f42cedfcc/f7133a4b0d687085-bb/s96x96u_c1/3dc94863a68077d75baf0ec97b25a5e2fadc08c8.pnj" alt="Avatar del blog">
-        </div>
-
         <div class="sidebar">
-            <div class="bio">
-                <h3><a href="about.html">Acerca de</a></h3>
+            <div class="sidebar-top-links">
+                <div class="bio">
+                    <h3><a href="about.html">Acerca de</a></h3>
+                </div>
+                <div class="ask">
+                    <h3><a href="contact.html">Contacto</a></h3>
+                </div>
             </div>
-            <div class="ask">
-                <h3><a href="contact.html">Contacto</a></h3> </div>
+            <div class="sidebar-avatar">
+                <img src="https://64.media.tumblr.com/dee90fcb298c458c07661f4f42cedfcc/f7133a4b0d687085-bb/s96x96u_c1/3dc94863a68077d75baf0ec97b25a5e2fadc08c8.pnj" alt="Avatar del blog">
+            </div>
         </div>
 
         <main>
             <h2>Bienvenido a Los Andes Góticos</h2>
-            <p>Este es un espacio dedicado a compartir mis pensamientos, creaciones y exploraciones.</p>
-            <p>Utiliza los menús de navegación para explorar mis textos, mi música o para saber más sobre mí y cómo contactarme.</p>
+            <p>En este lugar comparto mis trabajos, mi música, mis textos y mis fotos.</p>
             </main>
 
         <footer>
