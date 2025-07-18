@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.ico" type="image/x-icon"> <style>
-        /* Estilos generales (los mismos que en index.html y textos.html) */
+        /* Estilos generales */
         body {
             font-family: 'Merriweather', serif;
             line-height: 1.7;
@@ -31,11 +31,11 @@
             color: #fff;
         }
 
-        /* Encabezado */
+        /* Encabezado - (Ahora alineado a la izquierda y sin línea divisoria) */
         header {
-            text-align: center;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #333;
+            text-align: left;
+            padding-bottom: 0;
+            border-bottom: none;
             margin-bottom: 20px;
         }
 
@@ -55,51 +55,56 @@
             margin-top: 10px;
         }
 
-        /* Navegación (Menús) */
+        /* Navegación (Menús Principales) - (Ahora alineado a la izquierda y sin línea divisoria) */
         nav {
-            text-align: center;
+            text-align: left;
             margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #333;
+            padding-bottom: 0;
+            border-bottom: none;
         }
 
         nav ul {
             list-style: none;
             padding: 0;
             margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 15px;
         }
 
         nav ul li {
             display: inline-block;
-            margin: 0 15px;
             font-size: 1.1em;
             font-weight: 400;
+            margin: 0;
         }
 
         nav ul li a {
             color: #fff;
+            padding: 5px 0;
         }
 
         nav ul li a:hover {
             color: #ddd;
         }
 
-        /* Sidebar (Bio, Ask y Avatar) */
+        /* Sidebar (Acerca de y Contacto) - (Ahora alineado a la izquierda y sin línea divisoria superior, y sin avatar) */
         .sidebar {
             margin-top: 40px;
-            padding-top: 30px;
-            border-top: 1px solid #333;
+            padding-top: 0;
+            border-top: none;
             display: flex;
-            flex-direction: column; /* Apilar elementos verticalmente por defecto */
-            align-items: flex-start; /* Alinear todos los elementos a la izquierda */
-            gap: 20px; /* Espacio entre los bloques principales del sidebar */
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
             padding-left: 0;
             padding-right: 0;
         }
 
-        .sidebar-top-links { /* Contenedor para "Acerca de" y "Contacto" */
+        .sidebar-top-links {
             display: flex;
-            flex-direction: column; /* Vertical por defecto en móvil */
+            flex-direction: column;
             gap: 20px;
             width: 100%;
         }
@@ -114,21 +119,6 @@
         .bio h3, .ask h3 {
             margin-bottom: 0;
             white-space: nowrap;
-        }
-
-        .sidebar-avatar { /* Contenedor para la imagen del avatar */
-            margin-top: 10px;
-        }
-
-        .sidebar-avatar img {
-            width: 100px;
-            height: 100px;
-            border-radius: 0;
-            object-fit: cover;
-            border: 2px solid #555;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            background-color: #000;
-            display: block;
         }
 
         /* Contenido Principal (específico para esta página de música) */
@@ -149,8 +139,8 @@
         main h3 { /* Para los subtítulos como "2024" */
             font-size: 1.5em;
             font-weight: 400;
-            margin-top: 40px; /* Más espacio encima del subtítulo del año */
-            margin-bottom: 20px; /* Espacio debajo del subtítulo del año */
+            margin-top: 40px;
+            margin-bottom: 20px;
             color: #eee;
         }
 
@@ -160,33 +150,69 @@
         }
 
         .music-item { /* Contenedor para cada pieza musical */
-            margin-bottom: 40px; /* Espacio entre diferentes ítems de música */
-            background-color: #111; /* Fondo sutil para el reproductor */
+            margin-bottom: 40px;
+            background-color: #111;
             padding: 20px;
             border-radius: 5px;
             border: 1px solid #222;
         }
 
         .music-item iframe {
-            display: block; /* Para centrar si es necesario, o asegurar que ocupe el 100% del ancho */
-            margin: 0 auto; /* Centrar el reproductor */
+            display: block;
+            margin: 0 auto;
         }
+
+        /* Estilos para el texto de atribución de SoundCloud si lo quieres modificar */
+        .soundcloud-attribution {
+            font-size: 0.8em !important; /* Más pequeño */
+            color: #999 !important; /* Más suave */
+            line-height: 1.5 !important;
+            white-space: normal !important; /* Permite salto de línea */
+            text-overflow: unset !important; /* No corta el texto */
+            overflow: visible !important; /* No oculta */
+            font-family: 'Merriweather', serif !important; /* Usa tu tipografía principal */
+            font-weight: 300 !important;
+            margin-top: 10px; /* Espacio entre el reproductor y la atribución */
+            text-align: left; /* Alineado con el resto del contenido */
+        }
+        .soundcloud-attribution a {
+            color: #999 !important; /* Mismos enlaces en color suave */
+            text-decoration: underline !important;
+        }
+        .soundcloud-attribution a:hover {
+            color: #fff !important;
+        }
+
 
         .music-comment {
             margin-top: 15px;
             color: #aaa;
             font-size: 0.9em;
-            text-align: center; /* Centrar el comentario debajo del reproductor */
+            text-align: left; /* Alineado con el resto del contenido */
         }
 
         /* Pie de página */
         footer {
-            text-align: center;
+            text-align: center; /* Mantenemos el footer centrado para el copyright */
             padding-top: 40px;
             border-top: 1px solid #333;
             font-size: 0.85em;
             color: #666;
             margin-top: 60px;
+        }
+
+        /* Nuevo estilo para el enlace de SoundCloud en el footer */
+        .soundcloud-footer-link {
+            font-size: 0.75em; /* Tamaño más acotado */
+            color: #999; /* Color más suave */
+            margin-bottom: 10px; /* Espacio antes del copyright */
+        }
+        .soundcloud-footer-link a {
+            color: #F50; /* Color naranja de SoundCloud */
+            text-decoration: underline;
+        }
+        .soundcloud-footer-link a:hover {
+            color: #ff8800;
         }
 
         /* Media Query para pantallas más grandes: sidebar horizontal para enlaces */
@@ -211,6 +237,8 @@
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="textos.html">Mis textos</a></li>
                 <li><a href="musica.html">Mi música</a></li>
+                <li><a href="fotos.html">Mis fotos</a></li>
+                <li><a href="academia.html">Academia</a></li>
             </ul>
         </nav>
 
@@ -223,37 +251,28 @@
                     <h3><a href="contact.html">Contacto</a></h3>
                 </div>
             </div>
-            <div class="sidebar-avatar">
-                <img src="https://64.media.tumblr.com/dee90fcb298c458c07661f4f42cedfcc/f7133a4b0d687085-bb/s96x96u_c1/3dc94863a68077d75baf0ec97b25a5e2fadc08c8.pnj" alt="Avatar del blog">
             </div>
-        </div>
 
         <main>
-            <h2>Mis Composiciones</h2>
-            <p>Aquí puedes explorar algunas de mis creaciones musicales y ambientales.</p>
+            <h2>Mis composiciones</h2>
+            <p>Una lista no exhaustiva de mis trabajos.</p>
 
             <h3>2024</h3>
             <div class="music-item">
-                <iframe
-                    width="100%"
-                    height="166"
-                    scrolling="no"
-                    frameborder="no"
-                    allow="autoplay"
-                    src="https://w.soundcloud.com/player/?url=https%3A//on.soundcloud.com/4aVZrssAlTRpE59LxU&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
-                ></iframe>
+                <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1971397691&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                <div class="soundcloud-attribution">
+                    <a href="https://soundcloud.com/defenestraciones" title="Muñoz" target="_blank">Muñoz</a> · <a href="https://soundcloud.com/defenestraciones/una-esquirla-de-todesfuge-2024" title="Una esquirla de Todesfuge (2024)" target="_blank">Una esquirla de Todesfuge (2024)</a>
+                </div>
+
                 <div class="music-comment">
-                    <p>Una pieza experimental que captura la esencia de los sonidos andinos durante la noche.</p>
+                    <p>Una pieza inspirada en la lectura de <i>Todesfuge</i> realizada por Paul Celan, su autor.</p>
                 </div>
             </div>
 
-            <h3>Mi perfil completo en SoundCloud</h3>
-            <p>Explora mi catálogo completo de música y sigue mi progreso en SoundCloud.</p>
-            <p style="text-align:center;"><a href="https://soundcloud.com/tu-perfil" target="_blank" style="display:inline-block; background-color:#F50; color:#fff; padding:10px 20px; border-radius:5px;">Visitar mi SoundCloud</a></p>
-
-        </main>
+            </main>
 
         <footer>
+            <p class="soundcloud-footer-link">Visita mi SoundCloud completo en <a href="https://soundcloud.com/defenestraciones" target="_blank">soundcloud.com/defenestraciones</a></p>
             <p>&copy; 2023-2025 Los Andes Góticos. Hecho con furia y devoción.</p>
         </footer>
     </div>
