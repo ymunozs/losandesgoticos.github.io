@@ -33,9 +33,9 @@
 
         /* Encabezado */
         header {
-            text-align: center; /* El título y subtítulo se mantienen centrados */
-            padding-bottom: 20px;
-            border-bottom: 1px solid #333;
+            text-align: left; /* Alineado a la izquierda */
+            padding-bottom: 0; /* Eliminado el padding inferior */
+            border-bottom: none; /* Eliminada la barra divisoria */
             margin-bottom: 20px;
         }
 
@@ -57,43 +57,43 @@
 
         /* Navegación (Menús Principales) */
         nav {
-            text-align: left; /* Alineado a la izquierda */
+            text-align: left;
             margin-bottom: 40px;
-            padding-bottom: 0; /* Eliminado el padding inferior */
-            border-bottom: none; /* Eliminada la barra divisoria */
+            padding-bottom: 0;
+            border-bottom: none;
         }
 
         nav ul {
             list-style: none;
             padding: 0;
             margin: 0;
-            display: flex; /* Usar flexbox para los ítems */
-            flex-wrap: wrap; /* Permitir que los ítems salten de línea en pantallas pequeñas */
-            justify-content: flex-start; /* Alineación a la izquierda */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
             gap: 15px; /* Espacio entre los ítems */
         }
 
         nav ul li {
-            display: inline-block; /* Aunque flexbox ya lo hace, mantiene compatibilidad */
+            display: inline-block;
             font-size: 1.1em;
             font-weight: 400;
-            margin: 0; /* Resetea el margen si nav ul tuvo uno */
+            margin: 0;
         }
 
         nav ul li a {
             color: #fff;
-            padding: 5px 0; /* Pequeño padding para el área clicable */
+            padding: 5px 0;
         }
 
         nav ul li a:hover {
             color: #ddd;
         }
 
-        /* Sidebar (Bio, Ask y Avatar) - Mantiene su alineación a la izquierda */
+        /* Sidebar (Acerca de y Contacto) */
         .sidebar {
             margin-top: 40px;
-            padding-top: 30px;
-            border-top: 1px solid #333;
+            padding-top: 0;
+            border-top: none;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -102,7 +102,7 @@
             padding-right: 0;
         }
 
-        .sidebar-top-links {
+        .sidebar-top-links { /* Contenedor para "Acerca de" y "Contacto" */
             display: flex;
             flex-direction: column;
             gap: 20px;
@@ -119,21 +119,6 @@
         .bio h3, .ask h3 {
             margin-bottom: 0;
             white-space: nowrap;
-        }
-
-        .sidebar-avatar {
-            margin-top: 10px;
-        }
-
-        .sidebar-avatar img {
-            width: 100px;
-            height: 100px;
-            border-radius: 0;
-            object-fit: cover;
-            border: 2px solid #555;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            background-color: #000;
-            display: block;
         }
 
         /* Contenido Principal */
@@ -158,7 +143,7 @@
 
         /* Pie de página */
         footer {
-            text-align: center;
+            text-align: center; /* Mantenemos el footer centrado para el copyright */
             padding-top: 40px;
             border-top: 1px solid #333;
             font-size: 0.85em;
@@ -188,7 +173,8 @@
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="textos.html">Mis textos</a></li>
                 <li><a href="musica.html">Mi música</a></li>
-                <li><a href="fotos.html">Mis fotos</a></li> </ul>
+                <li><a href="fotos.html">Mis fotos</a></li>
+                <li><a href="academia.html">Academia</a></li> </ul>
         </nav>
 
         <div class="sidebar">
@@ -200,19 +186,19 @@
                     <h3><a href="contact.html">Contacto</a></h3>
                 </div>
             </div>
-            <div class="sidebar-avatar">
-                <img src="https://64.media.tumblr.com/dee90fcb298c458c07661f4f42cedfcc/f7133a4b0d687085-bb/s96x96u_c1/3dc94863a68077d75baf0ec97b25a5e2fadc08c8.pnj" alt="Avatar del blog">
-            </div>
         </div>
 
         <main>
             <h2>Bienvenido a Los Andes Góticos</h2>
-            <p>EEn este lugar comparto mis trabajos, textos, música y algunas fotos.</p>
+            <p>En este sitio comparto mi música, textos, trabajos y algunas fotos.</p>
             </main>
 
         <footer>
             <p>&copy; 2023-2025 Los Andes Góticos. Hecho con furia y devoción.</p>
         </footer>
+    </div>
+</body>
+</html>
     </div>
 </body>
 </html>
