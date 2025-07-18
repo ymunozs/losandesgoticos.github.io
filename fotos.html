@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mis fotos - Los Andes Góticos</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <style>
+        /* Estilos generales (Copiados de index.html para consistencia) */
+        body {
+            font-family: 'Merriweather', serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 30px;
+        }
+
+        a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #fff;
+        }
+
+        /* Encabezado - (Alineado a la izquierda y sin línea divisoria) */
+        header {
+            text-align: left;
+            padding-bottom: 0;
+            border-bottom: none;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8em;
+            font-weight: 400;
+        }
+
+        header h1 a {
+            color: #fff;
+        }
+
+        header p {
+            font-style: normal;
+            color: #999;
+            margin-top: 10px;
+        }
+
+        /* Navegación (Menús Principales) - (Alineado a la izquierda y sin línea divisoria) */
+        nav {
+            text-align: left;
+            margin-bottom: 40px;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 15px;
+        }
+
+        nav ul li {
+            display: inline-block;
+            font-size: 1.1em;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: #fff;
+            padding: 5px 0;
+        }
+
+        nav ul li a:hover {
+            color: #ddd;
+        }
+
+        /* Sidebar (Acerca de y Contacto) - (Alineado a la izquierda y sin línea divisoria superior, y sin avatar) */
+        .sidebar {
+            margin-top: 40px;
+            padding-top: 0;
+            border-top: none;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .sidebar-top-links {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .bio, .ask {
+            margin-bottom: 0;
+            flex-shrink: 0;
+            min-width: 120px;
+            text-align: left;
+        }
+
+        .bio h3, .ask h3 {
+            margin-bottom: 0;
+            white-space: nowrap;
+        }
+
+        /* Contenido Principal */
+        main {
+            padding-top: 30px;
+            border-top: 1px dashed #333;
+            margin-top: 40px;
+            text-align: left; /* Asegura que el contenido de main esté alineado a la izquierda */
+        }
+
+        main h2 {
+            font-size: 2em;
+            font-weight: 400;
+            margin-bottom: 15px;
+            line-height: 1.3;
+            color: #fff;
+        }
+
+        main p {
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+
+        /* Estilos específicos para la galería de fotos */
+        .gallery {
+            display: grid;
+            /* Columnas: se ajustan automáticamente. Mínimo 250px de ancho por columna, 1fr significa una fracción del espacio disponible */
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px; /* Espacio entre las fotos */
+            margin-top: 30px;
+        }
+
+        .gallery-item {
+            background-color: #111;
+            padding: 15px;
+            border: 1px solid #222;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: left; /* Asegura que el texto y la leyenda estén alineados a la izquierda dentro del item */
+        }
+
+        .gallery-item img {
+            max-width: 100%; /* La imagen no se desborda de su contenedor */
+            height: auto; /* Mantiene la proporción de la imagen */
+            display: block; /* Elimina espacio extra debajo de la imagen */
+            margin-bottom: 10px; /* Espacio entre la imagen y la leyenda */
+        }
+
+        .photo-legend {
+            font-size: 0.75em; /* Tamaño de letra más pequeño (equivalente a "letra 8" en contexto web) */
+            color: #aaa;
+            line-height: 1.4; /* Espaciado entre líneas para mejor lectura */
+            margin-bottom: 0; /* Elimina margen inferior extra */
+        }
+
+        /* Pie de página */
+        footer {
+            text-align: center; /* Mantenemos el footer centrado para el copyright */
+            padding-top: 40px;
+            border-top: 1px solid #333;
+            font-size: 0.85em;
+            color: #666;
+            margin-top: 60px;
+        }
+
+        /* Media Query para pantallas más grandes: sidebar horizontal para enlaces */
+        @media (min-width: 480px) {
+            .sidebar-top-links {
+                flex-direction: row;
+            }
+        }
+    </style>
+
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><a href="index.html">Los Andes Góticos</a></h1>
+            <p>Una herida que no sana</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="textos.html">Mis textos</a></li>
+                <li><a href="musica.html">Mi música</a></li>
+                <li><a href="fotos.html">Mis fotos</a></li>
+                <li><a href="academia.html">Academia</a></li>
+            </ul>
+        </nav>
+
+        <div class="sidebar">
+            <div class="sidebar-top-links">
+                <div class="bio">
+                    <h3><a href="about.html">Acerca de</a></h3>
+                </div>
+                <div class="ask">
+                    <h3><a href="contact.html">Contacto</a></h3>
+                </div>
+            </div>
+            </div>
+
+        <main>
+            <h2>Mis fotos</h2>
+            <p>Aquí encontrarás una selección de fotografías que he capturado.</p>
+
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="fotos/1.jpg" alt="Foto 1">
+                    <p class="photo-legend">Canon EOS3000 | Ilford 400 (forzado 500) | Revelado JPF Estudio | Julio 2025</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos/2.jpg" alt="Foto 2">
+                    <p class="photo-legend">Canon EOS3000 | Ilford 400 (forzado 500) | Revelado JPF Estudio | Julio 2025</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos/3.jpg" alt="Foto 3">
+                    <p class="photo-legend">Canon EOS3000 | Ilford 400 (forzado 500) | Revelado JPF Estudio | Julio 2025</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos/4.jpg" alt="Foto 4">
+                    <p class="photo-legend">Canon EOS3000 | Ilford 400 (forzado 500) | Revelado JPF Estudio | Julio 2025</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2023-2025 Los Andes Góticos. Hecho con furia y devoción.</p>
+        </footer>
+    </div>
+</body>
+</html>
