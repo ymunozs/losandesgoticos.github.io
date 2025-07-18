@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Academia - Los Andes Góticos</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Estilos generales (Copiados de index.html para consistencia) */
+        body {
+            font-family: 'Merriweather', serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 30px;
+        }
+
+        a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #fff;
+        }
+
+        /* Encabezado - (Alineado a la izquierda y sin línea divisoria) */
+        header {
+            text-align: left;
+            padding-bottom: 0;
+            border-bottom: none;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8em;
+            font-weight: 400;
+        }
+
+        header h1 a {
+            color: #fff;
+        }
+
+        header p {
+            font-style: normal;
+            color: #999;
+            margin-top: 10px;
+        }
+
+        /* Navegación (Menús Principales) - (Alineado a la izquierda y sin línea divisoria) */
+        nav {
+            text-align: left;
+            margin-bottom: 40px;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 15px;
+        }
+
+        nav ul li {
+            display: inline-block;
+            font-size: 1.1em;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: #fff;
+            padding: 5px 0;
+        }
+
+        nav ul li a:hover {
+            color: #ddd;
+        }
+
+        /* Sidebar (Acerca de y Contacto) - (Alineado horizontalmente) */
+        .sidebar {
+            margin-top: 40px;
+            padding-top: 0;
+            border-top: none;
+            display: flex;
+            align-items: center; /* Alineación vertical */
+            gap: 20px; /* Espacio entre los enlaces */
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .sidebar .bio, .sidebar .ask {
+            margin-bottom: 0;
+            flex-shrink: 0;
+            min-width: auto; /* Ajustar al contenido */
+            text-align: left;
+        }
+
+        .sidebar h3 {
+            margin-bottom: 0;
+            white-space: nowrap;
+            font-size: 1.1em; /* Mantener tamaño similar al menú principal */
+            font-weight: 400;
+        }
+
+        /* Contenido Principal */
+        main {
+            padding-top: 30px;
+            border-top: 1px dashed #333;
+            margin-top: 40px;
+            text-align: left; /* Alineación del contenido general a la izquierda */
+        }
+
+        main h2 {
+            font-size: 2em;
+            font-weight: 400;
+            margin-bottom: 25px; /* Espacio debajo del título principal */
+            line-height: 1.3;
+            color: #fff;
+            text-align: left; /* Título siempre alineado a la izquierda */
+        }
+
+        /* Estilos específicos para la lista de publicaciones */
+        .publications-list {
+            list-style: none; /* Elimina los puntos predeterminados */
+            padding: 0; /* Elimina el padding predeterminado de la lista */
+            margin: 0;
+        }
+
+        .publications-list li {
+            margin-bottom: 25px; /* Espacio entre cada publicación */
+            padding-left: 0; /* Asegura que no haya padding extra */
+            position: relative;
+            color: #ccc; /* Color para el texto de la publicación */
+            line-height: 1.6;
+            text-align: justify; /* Justificar el texto de cada publicación */
+        }
+
+        /* Opcional: para añadir un pequeño guion o punto personalizado si se desea una viñeta discreta */
+        .publications-list li::before {
+            content: "— "; /* Un guion como viñeta, o "• " para un punto */
+            color: #fff; /* Color del guion/punto */
+            font-weight: bold;
+            display: inline-block;
+            width: 1em; /* Ancho fijo para el guion */
+            margin-left: -1em; /* Mover el guion hacia la izquierda para que no ocupe espacio del texto */
+        }
+
+        .publications-list li strong {
+            color: #fff; /* Asegura que el nombre en negrita sea blanco */
+        }
+        
+        /* Asegurar que el texto en cursiva sea legible */
+        .publications-list li em {
+            font-style: italic;
+            color: #ddd; /* Un tono ligeramente más claro para la cursiva si es necesario, o mantener #ccc */
+        }
+
+        /* Estilos para la imagen al final */
+        .end-image-container {
+            text-align: center; /* Centrar la imagen */
+            margin-top: 40px; /* Espacio después de la lista de publicaciones */
+            margin-bottom: 20px; /* Espacio antes del footer */
+        }
+
+        .end-image {
+            max-width: 150px; /* Tamaño pequeño para la imagen */
+            height: auto;
+            display: block; /* Para centrarla con margin: auto */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Pie de página */
+        footer {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid #333;
+            font-size: 0.85em;
+            color: #666;
+            margin-top: 60px;
+        }
+    </style>
+
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><a href="index.html">Los Andes Góticos</a></h1>
+            <p>Una herida que no sana</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="textos.html">Mis textos</a></li>
+                <li><a href="musica.html">Mi música</a></li>
+                <li><a href="fotos.html">Mis fotos</a></li>
+                <li><a href="academia.html">Academia</a></li>
+            </ul>
+        </nav>
+
+        <div class="sidebar">
+            <div class="bio">
+                <h3><a href="about.html">Acerca de</a></h3>
+            </div>
+            <div class="ask">
+                <h3><a href="contact.html">Contacto</a></h3>
+            </div>
+        </div>
+
+        <main>
+            <h2>Mis publicaciones</h2>
+            <ul class="publications-list">
+                <li>
+                    TANZI-NETO, Adolfo, LIBERALI, Fernanda, KLUGE, Denise, NICOLAIDES, Christine & <strong>MUÑOZ-
+                    SALINAS, YERKO</strong>. (2025). “The affective turn in Applied Linguistics. Movements and intertwinings of
+                    the power of emotion in the field of language studies”. <em>The ESPecialist</em>. 46(1). 407-411.
+                </li>
+                <li>
+                    <strong>MUÑOZ-SALINAS, YERKO</strong>, CARO-ZÚÑIGA, Diego & JERIA, Isidora. (2025). “Creativity and Preservice
+                    Teachers: A Literature Review of an
+                    Underexplored Field (2014-2024)”. <em>Education Sciences</em>. Q1.
+                </li>
+                <li>
+                    DÍAZ-SACCO Alessandra & <strong>MUÑOZ-SALINAS, YERKO</strong>. (2024). “Conditions and opportunities for
+                    teacher collaboration during the implementation of a professional development programme”.<em>Professional Development in Education</em>. Q1.
+                </li>
+                <li>
+                    <strong>MUÑOZ-SALINAS, YERKO</strong>. (2023). “Understanding the connection between pre-service teachers’
+                    emotions and identity through metaphor: A qualitative study into six candidates from a Chilean
+                    university”. <em>Pedagogy, Culture & Society</em> (en asignación de número). Q1.
+                </li>
+                <li>
+                    <strong>MUÑOZ-SALINAS, YERKO</strong> & SALINAS, Álvaro. (2021). “What do preservice teachers learn by
+                    reflecting upon their emotional experiences during their training? A qualitative approach into four
+                    emotions”. <em>Reflective Practice</em>. 22(6). 844-859. Q1.
+                </li>
+                <li>
+                    <strong>MUÑOZ-SALINAS, YERKO</strong>. (2018). “Patrones emocionales de la interacción en la práctica del yoga
+                    en contextos educacionales chilenos”. <em>Cultura y Religión</em>, no. 12 (vol. 2), pp. 23 - 42. SCIELO-ESCI.
+                </li>
+                <li>
+                    HENRÍQUEZ, Rodrigo & <strong>MUÑOZ-SALINAS, YERKO</strong>. (2017). “Leer y escribir históricamente. Los
+                    desafíos pendientes de la enseñanza y el aprendizaje de la historia”. <em>Diálogo andino</em>, no. 53, pp. 7 -
+                    21. Q1.
+                </li>
+                <li>
+                    <strong>MUÑOZ-SALINAS, YERKO</strong> & TOLEDO TORO, SOFÍA. (2013). “Los otros creyentes: reflexiones acerca
+                    de la muta y el mercado religioso sobre una asociación esotérica en el Chile contemporáneo”,<em>Revista de Historia, Universidad de Concepción</em>, no. 20, vol. I, enero – julio, pp. 135 – 148. Q1.
+                </li>
+            </ul>
+
+            <div class="end-image-container">
+                <img src="art nouveau.png" alt="Decoración Art Nouveau" class="end-image">
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2023-2025 Los Andes Góticos. Hecho con furia y devoción.</p>
+        </footer>
+    </div>
+</body>
+</html>
