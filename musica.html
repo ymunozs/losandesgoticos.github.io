@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mis composiciones - Los Andes Góticos</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <style>
+        /* Estilos generales (los mismos que en index.html y textos.html) */
+        body {
+            font-family: 'Merriweather', serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 30px;
+        }
+
+        a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #fff;
+        }
+
+        /* Encabezado */
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #333;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8em;
+            font-weight: 400;
+        }
+
+        header h1 a {
+            color: #fff;
+        }
+
+        header p {
+            font-style: normal;
+            color: #999;
+            margin-top: 10px;
+        }
+
+        /* Navegación (Menús) */
+        nav {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #333;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+            font-size: 1.1em;
+            font-weight: 400;
+        }
+
+        nav ul li a {
+            color: #fff;
+        }
+
+        nav ul li a:hover {
+            color: #ddd;
+        }
+
+        /* Sidebar (Bio, Ask y Avatar) */
+        .sidebar {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            display: flex;
+            flex-direction: column; /* Apilar elementos verticalmente por defecto */
+            align-items: flex-start; /* Alinear todos los elementos a la izquierda */
+            gap: 20px; /* Espacio entre los bloques principales del sidebar */
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .sidebar-top-links { /* Contenedor para "Acerca de" y "Contacto" */
+            display: flex;
+            flex-direction: column; /* Vertical por defecto en móvil */
+            gap: 20px;
+            width: 100%;
+        }
+
+        .bio, .ask {
+            margin-bottom: 0;
+            flex-shrink: 0;
+            min-width: 120px;
+            text-align: left;
+        }
+
+        .bio h3, .ask h3 {
+            margin-bottom: 0;
+            white-space: nowrap;
+        }
+
+        .sidebar-avatar { /* Contenedor para la imagen del avatar */
+            margin-top: 10px;
+        }
+
+        .sidebar-avatar img {
+            width: 100px;
+            height: 100px;
+            border-radius: 0;
+            object-fit: cover;
+            border: 2px solid #555;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            background-color: #000;
+            display: block;
+        }
+
+        /* Contenido Principal (específico para esta página de música) */
+        main {
+            padding-top: 30px;
+            border-top: 1px dashed #333;
+            margin-top: 40px;
+        }
+
+        main h2 {
+            font-size: 2em;
+            font-weight: 400;
+            margin-bottom: 15px;
+            line-height: 1.3;
+            color: #fff;
+        }
+
+        main h3 { /* Para los subtítulos como "2024" */
+            font-size: 1.5em;
+            font-weight: 400;
+            margin-top: 40px; /* Más espacio encima del subtítulo del año */
+            margin-bottom: 20px; /* Espacio debajo del subtítulo del año */
+            color: #eee;
+        }
+
+        main p {
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+
+        .music-item { /* Contenedor para cada pieza musical */
+            margin-bottom: 40px; /* Espacio entre diferentes ítems de música */
+            background-color: #111; /* Fondo sutil para el reproductor */
+            padding: 20px;
+            border-radius: 5px;
+            border: 1px solid #222;
+        }
+
+        .music-item iframe {
+            display: block; /* Para centrar si es necesario, o asegurar que ocupe el 100% del ancho */
+            margin: 0 auto; /* Centrar el reproductor */
+        }
+
+        .music-comment {
+            margin-top: 15px;
+            color: #aaa;
+            font-size: 0.9em;
+            text-align: center; /* Centrar el comentario debajo del reproductor */
+        }
+
+        /* Pie de página */
+        footer {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid #333;
+            font-size: 0.85em;
+            color: #666;
+            margin-top: 60px;
+        }
+
+        /* Media Query para pantallas más grandes: sidebar horizontal para enlaces */
+        @media (min-width: 480px) {
+            .sidebar-top-links {
+                flex-direction: row;
+            }
+        }
+    </style>
+
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><a href="index.html">Los Andes Góticos</a></h1>
+            <p>Una herida que no sana</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="textos.html">Mis textos</a></li>
+                <li><a href="musica.html">Mi música</a></li>
+            </ul>
+        </nav>
+
+        <div class="sidebar">
+            <div class="sidebar-top-links">
+                <div class="bio">
+                    <h3><a href="about.html">Acerca de</a></h3>
+                </div>
+                <div class="ask">
+                    <h3><a href="contact.html">Contacto</a></h3>
+                </div>
+            </div>
+            <div class="sidebar-avatar">
+                <img src="https://64.media.tumblr.com/dee90fcb298c458c07661f4f42cedfcc/f7133a4b0d687085-bb/s96x96u_c1/3dc94863a68077d75baf0ec97b25a5e2fadc08c8.pnj" alt="Avatar del blog">
+            </div>
+        </div>
+
+        <main>
+            <h2>Mis Composiciones</h2>
+            <p>Aquí puedes explorar algunas de mis creaciones musicales y ambientales.</p>
+
+            <h3>2024</h3>
+            <div class="music-item">
+                <iframe
+                    width="100%"
+                    height="166"
+                    scrolling="no"
+                    frameborder="no"
+                    allow="autoplay"
+                    src="https://w.soundcloud.com/player/?url=https%3A//on.soundcloud.com/4aVZrssAlTRpE59LxU&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+                ></iframe>
+                <div class="music-comment">
+                    <p>Una pieza experimental que captura la esencia de los sonidos andinos durante la noche.</p>
+                </div>
+            </div>
+
+            <h3>Mi perfil completo en SoundCloud</h3>
+            <p>Explora mi catálogo completo de música y sigue mi progreso en SoundCloud.</p>
+            <p style="text-align:center;"><a href="https://soundcloud.com/tu-perfil" target="_blank" style="display:inline-block; background-color:#F50; color:#fff; padding:10px 20px; border-radius:5px;">Visitar mi SoundCloud</a></p>
+
+        </main>
+
+        <footer>
+            <p>&copy; 2023-2025 Los Andes Góticos. Hecho con furia y devoción.</p>
+        </footer>
+    </div>
+</body>
+</html>
