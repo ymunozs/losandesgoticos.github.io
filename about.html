@@ -127,37 +127,39 @@
             border-top: 1px dashed #333;
             margin-top: 40px;
             text-align: left;
-            display: flex; /* Flex container para la foto y el texto */
-            flex-direction: column; /* Apilar elementos verticalmente por defecto */
-            align-items: flex-start; /* Alinear elementos a la izquierda */
         }
 
         main h2 {
             font-size: 2em;
             font-weight: 400;
-            margin-bottom: 15px;
+            margin-bottom: 20px; /* Aumentado el margen inferior del título */
             line-height: 1.3;
             color: #fff;
-            width: 100%; /* Asegura que el título ocupe todo el ancho */
+            width: 100%;
+        }
+
+        .about-content {
+            display: flex; /* Contenedor flex para la foto y el texto */
+            flex-direction: column; /* Por defecto apilados en pantallas pequeñas */
+            align-items: flex-start; /* Alineación a la izquierda */
         }
 
         /* Estilos específicos para la foto en la página "Acerca de" */
         .about-photo {
-            max-width: 200px; /* Tamaño máximo para la foto, ajusta si es necesario */
+            max-width: 350px; /* Aumentado el tamaño máximo inicial para más protagonismo */
             height: auto;
-            border: 2px solid #555; /* Borde similar al avatar anterior */
+            border: 2px solid #555;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            margin-bottom: 25px; /* Espacio debajo de la foto */
-            display: block; /* Para que ocupe su propia línea y los márgenes funcionen */
-            border-radius: 0; /* Si quieres esquinas cuadradas */
+            margin-bottom: 20px; /* Espacio debajo de la foto en diseño apilado */
+            border-radius: 0;
         }
 
         .about-text {
-            margin-top: 20px; /* Espacio entre la foto y el texto si los apilas */
-            width: 100%; /* Asegura que el texto ocupe todo el ancho */
+            margin-top: 0;
+            flex-grow: 1; /* Permite que el texto ocupe el espacio restante */
         }
 
-        main p {
+        .about-text p {
             color: #ccc;
             margin-bottom: 20px;
         }
@@ -172,21 +174,17 @@
             margin-top: 60px;
         }
 
-        /* Media Query para pantallas más grandes: sidebar horizontal para enlaces y foto/texto en main */
-        @media (min-width: 480px) {
-            .sidebar-top-links {
-                flex-direction: row;
+        /* Media Query para pantallas más grandes: foto y texto en línea */
+        @media (min-width: 600px) { /* Ajusta el ancho según necesites para el cambio de diseño */
+            .about-content {
+                flex-direction: row; /* Foto y texto en la misma línea */
+                align-items: flex-start; /* Alineación vertical al inicio */
+                gap: 30px; /* Espacio entre foto y texto */
             }
 
-            main {
-                flex-direction: row; /* Mostrar foto y texto en línea horizontalmente en pantallas grandes */
-                align-items: flex-start; /* Alinear arriba */
-            }
-
-            .about-text {
-                margin-top: 0;
-                margin-left: 30px; /* Espacio entre foto y texto cuando están en línea */
-                flex-grow: 1; /* Permite que el texto ocupe el espacio restante */
+            .about-photo {
+                max-width: 350px; /* Mantiene el ancho máximo en pantallas grandes */
+                margin-bottom: 0; /* Elimina el margen inferior cuando están en línea */
             }
         }
     </style>
@@ -223,15 +221,17 @@
 
         <main>
             <h2>Acerca de</h2>
-            <img src="01970003.JPG" alt="Foto del autor" class="about-photo">
-            <div class="about-text">
-                <p>
-                    <b>CV.</b>
-                    
-                    <i>Los Andes Góticos</i> es un proyecto de Yerko Muñoz-Salinas (Santiago, 1991).
-                    El autor es profesor y cientista social. Recibió el grado de <b>doctor en educación</b> de la Pontificia Universidad Católica de Chile (2022) y en su ejercicio profesional se especializa en el estudio de la creatividad, las emociones y la formación docente. Ha participado en distintos conjuntos musicales (corales e instrumentales) y se interesa por la composición y la traducción.
-                    Cree que vivimos en el peor de los mundos posibles.
-                </p>
+            <div class="about-content">
+                <img src="01970003.JPG" alt="Foto del autor" class="about-photo">
+                <div class="about-text">
+                    <p>
+                        <b>CV.</b>
+                        
+                        <i>Los Andes Góticos</i> es un proyecto de Yerko Muñoz-Salinas (Santiago, 1991).
+                        El autor es profesor y cientista social. Recibió el grado de <b>doctor en educación</b> de la Pontificia Universidad Católica de Chile (2022) y en su ejercicio profesional se especializa en el estudio de la creatividad, las emociones y la formación docente. Ha participado en distintos conjuntos musicales (corales e instrumentales) y se interesa por la composición y la traducción.
+                        Cree que vivimos en el peor de los mundos posibles.
+                    </p>
+                </div>
             </div>
         </main>
 
